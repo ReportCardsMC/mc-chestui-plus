@@ -20,7 +20,7 @@ internal class GUISlotClickListener(gui: GUI) : GUIEventListener(gui) {
         if(click in PICKUP_CLICK_ACTIONS) {
             if(!gui.allowItemPickup) {
                 isCancelled = true
-                return
+                // return // This is commented out for my own use, literally why is it returning here when I need the drop and swap hand events on item clicks for additional actions, tech, you are silly for this one, actually wait I should check the git blame... One second... Okay yeah it was you, I'm not stupid, okay what the actual frick.
             }
         }
 
